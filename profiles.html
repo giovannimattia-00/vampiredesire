@@ -1,118 +1,212 @@
-<h1>Available Vampires</h1>
-<p class="subtitle">verified nocturnal profiles · updated nightly</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VampireDesire — Profiles</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&display=swap" rel="stylesheet">
+
+  <style>
+    /* BODY & BACKGROUND */
+    body {
+      background: #050505 url('https://i.ibb.co/d2X7nZ3/retro-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Nosifer', cursive;
+      color: #ccc;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* TITLE */
+    h1 {
+      text-align: center;
+      font-family: 'Creepster', cursive;
+      font-size: 48px;
+      color: #b00000;
+      text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
+      margin-top: 30px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #ff5555;
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 0 20px 50px 20px;
+    }
+
+    /* CARD */
+    .card {
+      background: rgba(0,0,0,0.8);
+      border: 2px solid #b00000;
+      padding: 10px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #ff0000, 0 0 30px #b00000;
+    }
+
+    .card img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-bottom: 1px solid #b00000;
+      filter: grayscale(30%) contrast(120%);
+      transition: filter 0.3s;
+    }
+
+    .card img:hover {
+      filter: grayscale(0%) contrast(140%) brightness(90%);
+    }
+
+    /* NAME & DESCRIPTION */
+    .card h2 {
+      font-family: 'Creepster', cursive;
+      font-size: 22px;
+      color: #b00000;
+      margin: 10px 0 5px;
+    }
+
+    .card p {
+      font-size: 18px;
+      line-height: 1.5;
+      color: #ccc;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #550000;
+      padding: 20px;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      background: rgba(0,0,0,0.6);
+    }
+
+    /* MUSIC */
+    audio {
+      display: none;
+    }
+
+  </style>
+</head>
+<body>
+
+<h1>VampireDesire</h1>
+<p class="subtitle">nocturnal profiles · updated nightly</p>
 
 <div class="grid">
 
   <!-- BOYS -->
-<div class="card">
-  <img src="images/lucien.jpg" alt="Lucien">
-  <h2>Lucien</h2>
-  <p>Turned in 1897. Keeps his emotions buried beneath silk manners. Watches more than he speaks.</p>
-</div>
+  <div class="card">
+    <img src="images/lucien.jpg" alt="Lucien">
+    <h2>Lucien</h2>
+    <p>Turned in 1897. Keeps his emotions buried beneath silk manners. Watches more than he speaks.</p>
+  </div>
 
-<div class="card">
-  <img src="images/valerian.jpg" alt="Valerian">
-  <h2>Valerian</h2>
-  <p>Born into nobility, died into hunger. Smells faintly of wine and ink.</p>
-</div>
+  <div class="card">
+    <img src="images/valerian.jpg" alt="Valerian">
+    <h2>Valerian</h2>
+    <p>Born into nobility, died into hunger. Smells faintly of wine and ink.</p>
+  </div>
 
-<div class="card">
-  <img src="images/rowan.jpg" alt="Rowan">
-  <h2>Rowan</h2>
-  <p>Soft-spoken and observant. Remembers every kindness shown to him.</p>
-</div>
+  <div class="card">
+    <img src="images/rowan.jpg" alt="Rowan">
+    <h2>Rowan</h2>
+    <p>Soft-spoken and observant. Remembers every kindness shown to him.</p>
+  </div>
 
-<div class="card">
-  <img src="images/cassian.jpg" alt="Cassian">
-  <h2>Cassian</h2>
-  <p>Smiles slowly, like he already knows the ending. Never rushes a decision.</p>
-</div>
+  <div class="card">
+    <img src="images/cassian.jpg" alt="Cassian">
+    <h2>Cassian</h2>
+    <p>Smiles slowly, like he already knows the ending. Never rushes a decision.</p>
+  </div>
 
-<div class="card">
-  <img src="images/elias.jpg" alt="Elias">
-  <h2>Elias</h2>
-  <p>Once a musician. Still hums forgotten melodies before dawn.</p>
-</div>
+  <div class="card">
+    <img src="images/elias.jpg" alt="Elias">
+    <h2>Elias</h2>
+    <p>Once a musician. Still hums forgotten melodies before dawn.</p>
+  </div>
 
-<div class="card">
-  <img src="images/noctis.jpg" alt="Noctis">
-  <h2>Noctis</h2>
-  <p>Rarely photographed clearly. Appears only when called.</p>
-</div>
+  <div class="card">
+    <img src="images/noctis.jpg" alt="Noctis">
+    <h2>Noctis</h2>
+    <p>Rarely photographed clearly. Appears only when called.</p>
+  </div>
 
-<div class="card">
-  <img src="images/alistair.jpg" alt="Alistair">
-  <h2>Alistair</h2>
-  <p>Polite to a fault. Patient enough to wait centuries.</p>
-</div>
+  <div class="card">
+    <img src="images/alistair.jpg" alt="Alistair">
+    <h2>Alistair</h2>
+    <p>Polite to a fault. Patient enough to wait centuries.</p>
+  </div>
 
-<div class="card">
-  <img src="images/silas.jpg" alt="Silas">
-  <h2>Silas</h2>
-  <p>Appears without sound. Leaves no trace behind.</p>
-</div>
+  <div class="card">
+    <img src="images/silas.jpg" alt="Silas">
+    <h2>Silas</h2>
+    <p>Appears without sound. Leaves no trace behind.</p>
+  </div>
 
-<div class="card">
-  <img src="images/ivere.jpg" alt="Ivere">
-  <h2>Ivere</h2>
-  <p>Feral instincts. Fiercely loyal once chosen.</p>
-</div>
+  <div class="card">
+    <img src="images/ivere.jpg" alt="Ivere">
+    <h2>Ivere</h2>
+    <p>Feral instincts. Fiercely loyal once chosen.</p>
+  </div>
 
-  
-<div class="card">
-  <img src="images/adrien.jpg" alt="Adrien">
-  <h2>Adrien</h2>
-  <p>Laughs easily. Bites harder than he admits.</p>
-</div>
+  <div class="card">
+    <img src="images/adrien.jpg" alt="Adrien">
+    <h2>Adrien</h2>
+    <p>Laughs easily. Bites harder than he admits.</p>
+  </div>
 
   <!-- GIRLS -->
   <div class="card">
-  <img src="images/iskra.jpg" alt="Iskra">
-  <h2>Iskra</h2>
-  <p>Quiet voice. Never looks away first.</p>
+    <img src="images/iskra.jpg" alt="Iskra">
+    <h2>Iskra</h2>
+    <p>Quiet voice. Never looks away first.</p>
+  </div>
+
+  <div class="card">
+    <img src="images/nyx.jpg" alt="Nyx">
+    <h2>Nyx</h2>
+    <p>Appears only after midnight. Disappears before dawn.</p>
+  </div>
+
+  <div class="card">
+    <img src="images/selene.jpg" alt="Selene">
+    <h2>Selene</h2>
+    <p>Moonbound and distant. Speaks in riddles when amused.</p>
+  </div>
+
+  <div class="card">
+    <img src="images/virelle.jpg" alt="Virelle">
+    <h2>Virelle</h2>
+    <p>Smiles sweetly. Leaves scars that never heal.</p>
+  </div>
+
 </div>
 
-<div class="card">
-  <img src="images/nyx.jpg" alt="Nyx">
-  <h2>Nyx</h2>
-  <p>Appears only after midnight. Disappears before dawn.</p>
-</div>
+<!-- BACKGROUND MUSIC -->
+<audio autoplay loop>
+  <source src="https://open.spotify.com/track/29bU6XTJLnbWlNDlP6BvLb?si=J_PT4VamTyit4HO38l-5Eg" type="audio/mpeg">
+</audio>
 
-<div class="card">
-  <img src="images/selene.jpg" alt="Selene">
-  <h2>Selene</h2>
-  <p>Moonbound and distant. Speaks in riddles when amused.</p>
-</div>
+<footer>
+  © VampireDesire · 2000s MySpace aesthetic
+</footer>
 
-<div class="card">
-  <img src="images/virelle.jpg" alt="Virelle">
-  <h2>Virelle</h2>
-  <p>Smiles sweetly. Leaves scars that never heal.</p>
-</div>
-
-  <style>
-    .card {
-  border: 1px solid #b00000;
-  padding: 10px;
-  margin: 15px;
-  background: black;
-}
-
-.card img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-bottom: 1px solid #b00000;
-  filter: grayscale(30%) contrast(120%);
-}
-
-.card h2 {
-  color: #b00000;
-  margin: 8px 0 4px;
-}
-
-.card p {
-  font-size: 18px; /* bigger text */
-  line-height: 1.5; /* spacing between lines */
-  color: #ccc;
-  }
+</body>
+      </html>
