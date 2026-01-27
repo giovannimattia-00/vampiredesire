@@ -1,0 +1,265 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VampireDesire</title>  <style>
+    /* CURSOR */
+    body {
+      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><text y="22" font-size="22">🦇</text></svg>'), auto;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: "Times New Roman", Georgia, serif;
+    }
+
+    body {
+      margin: 0;
+      background: #040404;
+      color: #e5e5e5;
+    }
+
+    .hidden { display: none; }
+
+    .center {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    /* BLINK */
+    .blink {
+      animation: blink 1.2s steps(2, start) infinite;
+    }
+
+    @keyframes blink {
+      to { visibility: hidden; }
+    }
+
+    /* LOADING SCREEN */
+    #loading {
+      background: black;
+      color: #b11212;
+      font-size: 24px;
+      letter-spacing: 2px;
+    }
+
+    /* WARNING PAGE */
+    #warning {
+      background: radial-gradient(circle, #220000, #050505 70%);
+    }
+
+    #warning h1 {
+      color: #b11212;
+      font-size: 44px;
+      margin-bottom: 20px;
+    }
+
+    #warning p {
+      max-width: 600px;
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .agree {
+      background: #111;
+      border: 1px solid #b11212;
+      padding: 14px 34px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    /* START PAGE */
+    #start {
+      background: radial-gradient(circle at top, #1a0000, #050505 70%);
+    }
+
+    #start h1 {
+      font-size: 56px;
+      color: #b11212;
+      letter-spacing: 3px;
+      margin-bottom: 18px;
+    }
+
+    #start p {
+      max-width: 520px;
+      font-size: 20px;
+      margin-bottom: 40px;
+    }
+
+    .join-btn {
+      background: linear-gradient(#5aa8ff, #1f5fd1);
+      padding: 14px 46px;
+      font-size: 22px;
+      font-weight: bold;
+      border-radius: 6px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.3);
+      cursor: pointer;
+    }
+
+    /* SIGNUP PAGE */
+    #signup {
+      background: #080808;
+    }
+
+    #signup h2 {
+      color: #b11212;
+      font-size: 38px;
+      margin-bottom: 20px;
+    }
+
+    .form {
+      width: 100%;
+      max-width: 420px;
+      text-align: left;
+    }
+
+    .form label {
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    .form input {
+      width: 100%;
+      background: #000;
+      border: 1px solid #2b0000;
+      padding: 10px;
+      margin-bottom: 16px;
+      color: #e5e5e5;
+    }
+
+    /* PROFILES */
+    #profiles {
+      padding: 50px 30px 80px;
+      background: #0a0a0a;
+    }
+
+    #profiles h2 {
+      text-align: center;
+      font-size: 42px;
+      color: #b11212;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      color: #999;
+      margin-bottom: 50px;
+    }
+
+    .grid {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #111;
+      border: 1px solid #2b0000;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(177,18,18,0.15);
+    }
+
+    .avatar {
+      height: 260px;
+      background: linear-gradient(135deg, #220000, #000);
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #777;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    .name { font-size: 22px; margin-bottom: 6px; }
+    .age { font-size: 14px; color: #999; margin-bottom: 10px; }
+    .desc { font-size: 15px; color: #ccc; line-height: 1.4; }
+    .status { margin-top: 12px; font-size: 13px; color: #b11212; font-style: italic; }
+
+    /* POPUP */
+    #popup {
+      position: fixed;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #000;
+      border: 2px solid #b11212;
+      padding: 20px 30px;
+      color: #e5e5e5;
+      z-index: 999;
+      box-shadow: 0 0 30px rgba(177,18,18,0.4);
+    }
+  </style></head>
+<body>  <!-- LOADING -->  <section id="loading" class="center">
+    CONNECTING TO VAMPIREDESIRE<span class="blink">_</span>
+  </section>  <!-- WARNING -->  <section id="warning" class="center hidden">
+    <h1>WARNING</h1>
+    <p>
+      This site contains nocturnal entities, simulated blood-seeking behavior,
+      and profiles that may appear to watch you back.
+      Proceeding confirms this is fictional and aesthetic-only.
+    </p>
+    <div class="agree" onclick="goStart()">I Understand</div>
+  </section>  <!-- START -->  <section id="start" class="center hidden">
+    <h1>VampireDesire</h1>
+    <p>They are lonely. They are eternal. They are looking for you.</p>
+    <div class="join-btn" onclick="goSignup()">Join Now</div>
+  </section>  <!-- SIGNUP -->  <section id="signup" class="center hidden">
+    <h2>Create Profile</h2>
+    <div class="form">
+      <label>Username</label>
+      <input placeholder="chosen alias" />
+      <label>Email</label>
+      <input placeholder="bloodtype@unknown" />
+      <label>Blood Type (optional)</label>
+      <input placeholder="A / B / AB / O" />
+      <div class="join-btn" onclick="goProfiles()">Submit</div>
+    </div>
+  </section>  <!-- PROFILES -->  <section id="profiles" class="hidden">
+    <h2>Available Vampires</h2>
+    <div class="subtitle">verified nocturnal profiles · updated nightly</div>
+    <div class="grid">
+      <div class="card"><div class="avatar">signal lost</div><div class="name">Lucien</div><div class="age">appears 24 · turned 1897</div><div class="desc">Writes letters he never sends. Prefers slow heartbeats.</div><div class="status">currently seeking donor</div></div>
+      <div class="card"><div class="avatar">loading…</div><div class="name">Iskra</div><div class="age">appears 19 · unknown</div><div class="desc">Soft voice. Remembers your shadow.</div><div class="status">active nearby</div></div>
+      <div class="card"><div class="avatar">image corrupted</div><div class="name">Valerian</div><div class="age">appears 30 · 1720</div><div class="desc">Aristocratic. Drinks wine and worse.</div><div class="status">online now</div></div>
+      <div class="card"><div class="avatar">file missing</div><div class="name">Nyx</div><div class="age">appears 21 · eternal</div><div class="desc">Does not blink often.</div><div class="status">watching</div></div>
+    </div>
+  </section>  <!-- POPUP -->  <div id="popup" class="hidden">
+    A vampire viewed your profile.
+  </div>  <script>
+    setTimeout(() => {
+      document.getElementById('loading').classList.add('hidden');
+      document.getElementById('warning').classList.remove('hidden');
+    }, 2000);
+
+    function goStart() {
+      warning.classList.add('hidden');
+      start.classList.remove('hidden');
+    }
+
+    function goSignup() {
+      start.classList.add('hidden');
+      signup.classList.remove('hidden');
+    }
+
+    function goProfiles() {
+      signup.classList.add('hidden');
+      profiles.classList.remove('hidden');
+      setTimeout(showPopup, 2500);
+    }
+
+    function showPopup() {
+      popup.classList.remove('hidden');
+      setTimeout(() => popup.classList.add('hidden'), 3000);
+    }
+  </script></body>
+</html>
