@@ -1,0 +1,22 @@
+body {
+  background: #050505;
+  color: #e5e5e5;
+  font-family: "Times New Roman", serif;
+  text-align: center;
+  padding: 40px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: darkred;
+  color: white;
+  text-decoration: none;
+}
+
+.card img {
+  width: 200px;
+  height: 260px;
+  object-fit: cover;
+}
