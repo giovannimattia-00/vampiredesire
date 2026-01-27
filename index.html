@@ -1,1 +1,87 @@
-<a class="button" href="warning.html">Enter Site</a>
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VampireDesire</title>
+  <style>
+    body {
+      background: black;
+      color: #b00000;
+      font-family: "Courier New", monospace;
+      text-align: center;
+      cursor: crosshair;
+      margin: 0;
+      padding: 0;
+    }.blink {
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to { visibility: hidden; }
+}
+
+.container {
+  padding-top: 20vh;
+}
+
+button {
+  background: black;
+  color: #b00000;
+  border: 1px solid #b00000;
+  padding: 10px 25px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #b00000;
+  color: black;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: black;
+  border: 2px solid #b00000;
+  padding: 20px;
+  z-index: 10;
+}
+
+.popup button {
+  margin-top: 10px;
+}
+
+footer {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  font-size: 12px;
+  color: #550000;
+}
+
+  </style>
+</head>
+<body><div class="container">
+  <h1 class="blink">VAMPIRE DESIRE</h1>
+  <p>private nocturnal registry</p>
+  <p class="blink">access restricted</p><button onclick="openPopup()">JOIN NOW</button>
+
+</div><div class="popup" id="popup">
+  <p>⚠ WARNING ⚠</p>
+  <p>This site contains immortal entities.</p>
+  <p>Proceed only if invited.</p>
+  <button onclick="enterSite()">I UNDERSTAND</button>
+</div><footer>
+  <p>© unknown · after sunset only</p>
+</footer><script>
+  function openPopup() {
+    document.getElementById('popup').style.display = 'block';
+  }
+
+  function enterSite() {
+    window.location.href = 'warning.html';
+  }
+</script></body>
+</html>
