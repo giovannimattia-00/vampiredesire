@@ -1,17 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Warning — VampireDesire</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body class="warning">
-  <h1>WARNING</h1>
-  <p>
-    This site is fictional.  
-    It contains simulated vampires, fake profiles,
-    and aesthetic horror elements.
-  </p>
+<meta charset="UTF-8">
+<title>VampireDesire — Warning</title>
+<link href="https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&display=swap" rel="stylesheet">
 
-  <a class="button" href="signup.html">I Understand</a>
+<style>
+body {
+  background: black;
+  color: #b00000;
+  font-family: 'Nosifer', cursive;
+  text-align: center;
+  padding-top: 15vh;
+  cursor: crosshair;
+}
+h1 {
+  font-family: 'Creepster', cursive;
+  font-size: 50px;
+  text-shadow: 0 0 5px red;
+}
+p {
+  font-size: 20px;
+  margin: 20px;
+}
+button {
+  background: black;
+  color: #b00000;
+  border: 2px solid #b00000;
+  padding: 10px 25px;
+  font-size: 18px;
+  cursor: pointer;
+}
+button:hover {
+  background: #b00000;
+  color: black;
+}
+</style>
+</head>
+
+<body>
+<h1>WARNING</h1>
+<p>Entering this site means you accept the eternal night.</p>
+<p>Do not proceed if faint of heart.</p>
+<button onclick="enterSite()">I ACCEPT</button>
+
+<script>
+function enterSite() {
+  document.body.innerHTML = '<h1 class="blink">ACCESS GRANTED...</h1>';
+  setTimeout(function(){ window.location.href = 'signup.html'; }, 2000);
+}
+</script>
+
 </body>
-</html>
+  </html>
