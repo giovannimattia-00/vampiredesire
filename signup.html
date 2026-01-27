@@ -1,16 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Sign Up — VampireDesire</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>VampireDesire — Signup</title>
+<link href="https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&display=swap" rel="stylesheet">
+<style>
+body {
+  background: black;
+  color: #b00000;
+  font-family: 'Nosifer', cursive;
+  text-align: center;
+  padding-top: 10vh;
+}
+h1 {
+  font-family: 'Creepster', cursive;
+  font-size: 45px;
+  text-shadow: 0 0 5px #ff0000;
+}
+form {
+  display: inline-block;
+  text-align: left;
+  background: rgba(0,0,0,0.8);
+  border: 2px solid #b00000;
+  padding: 20px;
+}
+input {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  background: black;
+  color: #b00000;
+  border: 1px solid #b00000;
+  width: 250px;
+}
+input:focus {
+  outline: none;
+  border-color: #ff0000;
+}
+button {
+  background: black;
+  color: #b00000;
+  border: 2px solid #b00000;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:hover {
+  background: #b00000;
+  color: black;
+}
+</style>
 </head>
-<body class="signup">
-  <h1>Create Profile</h1>
+<body>
 
-  <input placeholder="Alias">
-  <input placeholder="Email">
-  <input placeholder="Blood type (optional)">
+<h1>Register for the Night</h1>
 
-  <a class="button" href="profiles.html">Submit</a>
+<form onsubmit="goProfiles(event)">
+  <label>Name:</label>
+  <input type="text" required placeholder="Your vampire name">
+  <label>Email:</label>
+  <input type="email" required placeholder="your@email.com">
+  <label>Password:</label>
+  <input type="password" required placeholder="******">
+  <button type="submit">Join Now</button>
+</form>
+
+<script>
+function goProfiles(e){
+  e.preventDefault(); // prevent real submission
+  alert("Welcome to the eternal night...");
+  window.location.href = 'profiles.html';
+}
+</script>
+
 </body>
 </html>
