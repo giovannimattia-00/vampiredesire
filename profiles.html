@@ -200,10 +200,17 @@
 </div>
 
 <!-- BACKGROUND MUSIC -->
-<audio autoplay loop>
-  <source src="https://open.spotify.com/track/29bU6XTJLnbWlNDlP6BvLb?si=J_PT4VamTyit4HO38l-5Eg" type="audio/mpeg">
-</audio>
-
+<iframe
+  width="0"
+  height="0"
+  src="https://youtu.be/rinkviEmeXk?si=-P7pMFkGZCV3SM05"
+  frameborder="0"
+  allow="autoplay">
+</iframe>
+<button onclick="document.getElementById('bgm').contentWindow.postMessage('{"event":"command","func":"unMute","args":""}', '*')">
+  ▶ Play Music
+</button>
+  
 <footer>
   © VampireDesire · 2000s MySpace aesthetic
 </footer>
