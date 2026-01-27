@@ -1,87 +1,105 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>VampireDesire</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&display=swap" rel="stylesheet">
+
   <style>
     body {
-      background: black;
+      background: black url('https://i.ibb.co/d2X7nZ3/retro-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Creepster', cursive;
       color: #b00000;
-      font-family: "Courier New", monospace;
-      text-align: center;
-      cursor: crosshair;
       margin: 0;
       padding: 0;
-    }.blink {
-  animation: blink 1s steps(2, start) infinite;
-}
+      text-align: center;
+      cursor: crosshair;
+    }
 
-@keyframes blink {
-  to { visibility: hidden; }
-}
+    .blink {
+      animation: blink 1s steps(2, start) infinite;
+    }
 
-.container {
-  padding-top: 20vh;
-}
+    @keyframes blink { to { visibility: hidden; } }
 
-button {
-  background: black;
-  color: #b00000;
-  border: 1px solid #b00000;
-  padding: 10px 25px;
-  font-size: 16px;
-  cursor: pointer;
-}
+    .container {
+      padding-top: 20vh;
+    }
 
-button:hover {
-  background: #b00000;
-  color: black;
-}
+    button {
+      background: black;
+      color: #b00000;
+      border: 2px solid #b00000;
+      padding: 10px 25px;
+      font-size: 18px;
+      cursor: pointer;
+      font-family: 'Creepster', cursive;
+    }
 
-.popup {
-  display: none;
-  position: fixed;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: black;
-  border: 2px solid #b00000;
-  padding: 20px;
-  z-index: 10;
-}
+    button:hover {
+      background: #b00000;
+      color: black;
+    }
 
-.popup button {
-  margin-top: 10px;
-}
+    .popup {
+      display: none;
+      position: fixed;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: black;
+      border: 2px solid #b00000;
+      padding: 25px;
+      z-index: 10;
+      text-align: center;
+    }
 
-footer {
-  position: fixed;
-  bottom: 10px;
-  width: 100%;
-  font-size: 12px;
-  color: #550000;
-}
+    .popup button {
+      margin-top: 10px;
+    }
 
+    footer {
+      position: fixed;
+      bottom: 10px;
+      width: 100%;
+      font-size: 12px;
+      color: #550000;
+    }
   </style>
 </head>
-<body><div class="container">
+
+<body>
+
+<div class="container">
   <h1 class="blink">VAMPIRE DESIRE</h1>
   <p>private nocturnal registry</p>
-  <p class="blink">access restricted</p><button onclick="openPopup()">JOIN NOW</button>
+  <p class="blink">access restricted</p>
+  <button onclick="openPopup()">JOIN NOW</button>
+</div>
 
-</div><div class="popup" id="popup">
+<div class="popup" id="popup">
   <p>⚠ WARNING ⚠</p>
   <p>This site contains immortal entities.</p>
   <p>Proceed only if invited.</p>
   <button onclick="enterSite()">I UNDERSTAND</button>
-</div><footer>
-  <p>© unknown · after sunset only</p>
-</footer><script>
+</div>
+
+<footer>© VampireDesire · MySpace 2000s Retro</footer>
+
+<script>
   function openPopup() {
     document.getElementById('popup').style.display = 'block';
   }
 
   function enterSite() {
-    window.location.href = 'warning.html';
+    // Fake loading effect
+    document.body.innerHTML = '<h1 class="blink">LOADING...</h1>';
+    setTimeout(function(){ window.location.href = 'warning.html'; }, 2500);
   }
-</script></body>
+</script>
+
+</body>
 </html>
