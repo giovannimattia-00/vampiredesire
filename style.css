@@ -20,3 +20,13 @@ body {
   height: 260px;
   object-fit: cover;
 }
+img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border: 1px solid #b00000;
+  filter: grayscale(30%) contrast(120%);
+}
+img:hover {
+  filter: grayscale(0%) contrast(140%);
+}
