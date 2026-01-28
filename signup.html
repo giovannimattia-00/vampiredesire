@@ -1,77 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>VampireDesire — Signup</title>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=VT323&display=swap" rel="stylesheet">
-<style>
-body {
-  background: black;
-  color: #b00000;
-  font-family: 'Nosifer', cursive;
-  text-align: center;
-  padding-top: 10vh;
-}
-h1 {
-  font-family: 'Creepster', cursive;
-  font-size: 45px;
-  text-shadow: 0 0 5px #ff0000;
-}
-form {
-  display: inline-block;
-  text-align: left;
-  background: rgba(0,0,0,0.8);
-  border: 2px solid #b00000;
-  padding: 20px;
-}
-input {
-  display: block;
-  margin: 10px 0;
-  padding: 10px;
-  background: black;
-  color: #b00000;
-  border: 1px solid #b00000;
-  width: 250px;
-}
-input:focus {
-  outline: none;
-  border-color: #ff0000;
-}
-button {
-  background: black;
-  color: #b00000;
-  border: 2px solid #b00000;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-}
-button:hover {
-  background: #b00000;
-  color: black;
-}
-</style>
+<title>Sign Up</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<h1>Register for the Night</h1>
-
-<form onsubmit="goProfiles(event)">
-  <label>Name:</label>
-  <input type="text" required placeholder="Your vampire name">
-  <label>Email:</label>
-  <input type="email" required placeholder="your@email.com">
-  <label>Password:</label>
-  <input type="password" required placeholder="******">
-  <button type="submit">Join Now</button>
+<h1>sign up</h1>
+<form onsubmit="location.href='profiles.html';return false;">
+<p>Username:</p>
+<input><p>Blood Type:</p>
+<input><br>
+<button type="submit">Enter</button>
 </form>
-
-<script>
-function goProfiles(e){
-  e.preventDefault(); // prevent real submission
-  alert("Welcome to the eternal night...");
-  window.location.href = 'profiles.html';
-}
-</script>
-
 </body>
 </html>
