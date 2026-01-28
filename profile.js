@@ -1,6 +1,14 @@
 // UNIQUE KEY PER PROFILE (set in HTML)
 const key = document.body.dataset.profile;
 
+if (!localStorage.getItem(key+"_seeded")) {
+  localStorage.setItem(key+"_revs", JSON.stringify([
+    {name:"Anonymous", rating:5, text:"Changed my life."},
+    {name:"user_x13", rating:4, text:"Fast replies. Sharp teeth."}
+  ]));
+  localStorage.setItem(key+"_seeded","yes");
+}
+
 /* ---------- MESSAGES ---------- */
 function addMessage() {
   const text = document.getElementById("msgText").value.trim();
@@ -68,3 +76,13 @@ document.addEventListener("DOMContentLoaded", ()=>{
   renderMessages();
   renderReviews();
 });
+
+const statuses = [
+  "Online now",
+  "Idle",
+  "Feeding",
+  "Away",
+  "Offline"
+];
+document.getElementById("status").innerText =
+  statuses[Math.floor(Math.random()*statuses.length)];
