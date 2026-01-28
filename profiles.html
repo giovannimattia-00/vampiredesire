@@ -1,224 +1,269 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
-  <title>VampireDesire — Profiles</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=VT323&display=swap" rel="stylesheet">
+  <title>VampireDesire — Active Members</title>
 
   <style>
-    /* BODY & BACKGROUND */
     body {
-      background: #050505 url('https://i.ibb.co/d2X7nZ3/retro-bg.jpg') no-repeat center center fixed;
-      background-size: cover;
-      font-family: 'Nosifer', cursive;
-      color: #ccc;
+      background: #000;
+      color: #e0e0e0;
+      font-family: Arial, Verdana, sans-serif;
+      cursor: crosshair;
       margin: 0;
       padding: 0;
     }
 
-    /* TITLE */
-    h1 {
+    /* HEADER */
+    .header {
+      background: #100000;
+      border-bottom: 3px solid #7a0000;
       text-align: center;
-      font-family: 'Creepster', cursive;
-      font-size: 48px;
+      padding: 15px;
+    }
+
+    .header h1 {
       color: #b00000;
-      text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
-      margin-top: 30px;
+      font-family: "Times New Roman", serif;
+      font-size: 36px;
+      letter-spacing: 1px;
     }
 
-    .subtitle {
+    .blink {
+      animation: blink 1s steps(1) infinite;
+      color: red;
+      font-weight: bold;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    /* WARNING BAR */
+    .warning {
+      background: #200000;
+      border-top: 1px solid #400000;
+      border-bottom: 1px solid #400000;
       text-align: center;
-      color: #ff5555;
-      font-size: 18px;
-      margin-bottom: 40px;
+      font-size: 14px;
+      padding: 8px;
     }
 
-    /* GRID */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      padding: 0 20px 50px 20px;
+    /* PROFILES TABLE */
+    table {
+      width: 95%;
+      margin: 20px auto 80px;
+      border-collapse: collapse;
     }
 
-    /* CARD */
-    .card {
-      background: rgba(0,0,0,0.8);
-      border: 2px solid #b00000;
+    td {
+      border: 1px solid #300000;
       padding: 10px;
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
-      cursor: pointer;
+      vertical-align: top;
     }
 
-    .card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 15px #ff0000, 0 0 30px #b00000;
+    .photo {
+      width: 140px;
     }
 
-    .card img {
-      width: 100%;
-      aspect-ratio: 1 / 1;
+    .photo img {
+      width: 140px;
+      height: 140px;
       object-fit: cover;
-      border-bottom: 1px solid #b00000;
-      filter: grayscale(30%) contrast(120%);
-      transition: filter 0.3s;
+      border: 1px solid #222;
+      filter: contrast(110%) brightness(85%);
     }
 
-    .card img:hover {
-      filter: grayscale(0%) contrast(140%) brightness(90%);
-    }
-
-    /* NAME & DESCRIPTION */
-    .card h2 {
-      font-family: 'Creepster', cursive;
-      font-size: 22px;
+    .info b {
       color: #b00000;
-      margin: 10px 0 5px;
+      font-size: 18px;
     }
 
-    .card p {
-      font-size: 18px;
-      line-height: 1.5;
-      color: #ccc;
+    .info p {
+      font-size: 15px;
+      line-height: 1.4;
+    }
+
+    .online {
+      color: #00ff00;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    /* SIDEBAR AD */
+    .ad {
+      position: fixed;
+      right: 5px;
+      top: 120px;
+      width: 160px;
+      background: #120000;
+      border: 2px solid #7a0000;
+      padding: 10px;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .ad b {
+      color: red;
     }
 
     /* FOOTER */
-    footer {
-      text-align: center;
-      font-size: 12px;
-      color: #550000;
-      padding: 20px;
+    .footer {
       position: fixed;
-      width: 100%;
       bottom: 0;
-      background: rgba(0,0,0,0.6);
+      width: 100%;
+      background: #050000;
+      border-top: 2px solid #300000;
+      font-size: 11px;
+      text-align: center;
+      padding: 6px;
+      color: #550000;
     }
 
-    /* MUSIC */
-    audio {
-      display: none;
-    }
-
+    audio { display: none; }
   </style>
 </head>
+
 <body>
 
-<h1>VampireDesire</h1>
-<p class="subtitle">nocturnal profiles · updated nightly</p>
-
-<div class="grid">
-
-  <!-- BOYS -->
-  <div class="card">
-    <img src="images/lucien.jpg" alt="Lucien">
-    <h2>Lucien</h2>
-    <p>Turned in 1897. Keeps his emotions buried beneath silk manners. Watches more than he speaks.</p>
-  </div>
-
-  <div class="card">
-    <img src="images/valerian.jpg" alt="Valerian">
-    <h2>Valerian</h2>
-    <p>Born into nobility, died into hunger. Smells faintly of wine and ink.</p>
-  </div>
-
-  <div class="card">
-    <img src="images/rowan.jpg" alt="Rowan">
-    <h2>Rowan</h2>
-    <p>Soft-spoken and observant. Remembers every kindness shown to him.</p>
-  </div>
-
-  <div class="card">
-    <img src="images/cassian.jpg" alt="Cassian">
-    <h2>Cassian</h2>
-    <p>Smiles slowly, like he already knows the ending. Never rushes a decision.</p>
-  </div>
-
-  <div class="card">
-    <img src="images/elias.jpg" alt="Elias">
-    <h2>Elias</h2>
-    <p>Once a musician. Still hums forgotten melodies before dawn.</p>
-  </div>
-
-  <div class="card">
-    <img src="images/noctis.jpg" alt="Noctis">
-    <h2>Noctis</h2>
-    <p>Rarely photographed clearly. Appears only when called.</p>
-  </div>
-
-  <div class="card">
-    <img src="images/alistair.jpg" alt="Alistair">
-    <h2>Alistair</h2>
-    <p>Polite to a fault. Patient enough to wait centuries.</p>
-  </div>
-
-  <div class="card">
-    <img src="images/silas.jpg" alt="Silas">
-    <h2>Silas</h2>
-    <p>Appears without sound. Leaves no trace behind.</p>
-  </div>
-
-  <div class="card">
-    <img src="images/ivere.jpg" alt="Ivere">
-    <h2>Ivere</h2>
-    <p>Feral instincts. Fiercely loyal once chosen.</p>
-  </div>
-
-  <div class="card">
-    <img src="images/adrien.jpg" alt="Adrien">
-    <h2>Adrien</h2>
-    <p>Laughs easily. Bites harder than he admits.</p>
-  </div>
-
-  <!-- GIRLS -->
-  <div class="card">
-    <img src="images/iskra.jpg" alt="Iskra">
-    <h2>Iskra</h2>
-    <p>Quiet voice. Never looks away first.</p>
-  </div>
-
-  <div class="card">
-    <img src="images/nyx.jpg" alt="Nyx">
-    <h2>Nyx</h2>
-    <p>Appears only after midnight. Disappears before dawn.</p>
-  </div>
-
-  <div class="card">
-    <img src="images/selene.jpg" alt="Selene">
-    <h2>Selene</h2>
-    <p>Moonbound and distant. Speaks in riddles when amused.</p>
-  </div>
-
-  <div class="card">
-    <img src="images/virelle.jpg" alt="Virelle">
-    <h2>Virelle</h2>
-    <p>Smiles sweetly. Leaves scars that never heal.</p>
-  </div>
-
+<div class="header">
+  <h1>VampireDesire</h1>
+  <div class="blink">⚠ ACTIVE VAMPIRES ONLINE ⚠</div>
 </div>
 
-<!-- BACKGROUND MUSIC -->
-<iframe
-  width="0"
-  height="0"
-  src="https://youtu.be/rinkviEmeXk?si=-P7pMFkGZCV3SM05"
-  frameborder="0"
-  allow="autoplay">
-</iframe>
+<div class="warning">
+  WARNING: By viewing these profiles, you agree VampireDesire is not responsible for blood loss, obsession, or disappearance.
+</div>
 
-  <div class="now-playing">
-Now Playing: Unknown Track — click ▶ to hear
-  </div>
-  
-<button onclick="document.getElementById('bgm').contentWindow.postMessage('{"event":"command","func":"unMute","args":""}', '*')">
-  ▶ Play Music
-</button>
-  
-<footer>
-  © VampireDesire · 2000s MySpace aesthetic
-</footer>
+<table>
+
+<tr>
+<td class="photo"><img src="images/lucien.jpg"></td>
+<td class="info">
+<b>Lucien</b> <span class="online">● ONLINE</span>
+<p>Turned in 1897. Keeps his emotions buried beneath silk manners. Watches more than he speaks.</p>
+</td>
+</tr>
+
+<tr>
+<td class="photo"><img src="images/valerian.jpg"></td>
+<td class="info">
+<b>Valerian</b> <span class="online">● ONLINE</span>
+<p>Born into nobility, died into hunger. Smells faintly of wine and ink.</p>
+</td>
+</tr>
+
+<tr>
+<td class="photo"><img src="images/rowan.jpg"></td>
+<td class="info">
+<b>Rowan</b>
+<p>Soft-spoken and observant. Remembers every kindness shown to him.</p>
+</td>
+</tr>
+
+<tr>
+<td class="photo"><img src="images/cassian.jpg"></td>
+<td class="info">
+<b>Cassian</b> <span class="online">● ONLINE</span>
+<p>Smiles slowly, like he already knows the ending. Never rushes a decision.</p>
+</td>
+</tr>
+
+<tr>
+<td class="photo"><img src="images/elias.jpg"></td>
+<td class="info">
+<b>Elias</b>
+<p>Once a musician. Still hums forgotten melodies before dawn.</p>
+</td>
+</tr>
+
+<tr>
+<td class="photo"><img src="images/noctis.jpg"></td>
+<td class="info">
+<b>Noctis</b> <span class="online">● ONLINE</span>
+<p>Rarely photographed clearly. Appears only when called.</p>
+</td>
+</tr>
+
+<tr>
+<td class="photo"><img src="images/alistair.jpg"></td>
+<td class="info">
+<b>Alistair</b>
+<p>Polite to a fault. Patient enough to wait centuries.</p>
+</td>
+</tr>
+
+<tr>
+<td class="photo"><img src="images/silas.jpg"></td>
+<td class="info">
+<b>Silas</b>
+<p>Appears without sound. Leaves no trace behind.</p>
+</td>
+</tr>
+
+<tr>
+<td class="photo"><img src="images/ivere.jpg"></td>
+<td class="info">
+<b>Ivere</b> <span class="online">● ONLINE</span>
+<p>Feral instincts. Fiercely loyal once chosen.</p>
+</td>
+</tr>
+
+<tr>
+<td class="photo"><img src="images/adrien.jpg"></td>
+<td class="info">
+<b>Adrien</b>
+<p>Laughs easily. Bites harder than he admits.</p>
+</td>
+</tr>
+
+<tr>
+<td class="photo"><img src="images/iskra.jpg"></td>
+<td class="info">
+<b>Iskra</b>
+<p>Quiet voice. Never looks away first.</p>
+</td>
+</tr>
+
+<tr>
+<td class="photo"><img src="images/nyx.jpg"></td>
+<td class="info">
+<b>Nyx</b> <span class="online">● ONLINE</span>
+<p>Appears only after midnight. Disappears before dawn.</p>
+</td>
+</tr>
+
+<tr>
+<td class="photo"><img src="images/selene.jpg"></td>
+<td class="info">
+<b>Selene</b>
+<p>Moonbound and distant. Speaks in riddles when amused.</p>
+</td>
+</tr>
+
+<tr>
+<td class="photo"><img src="images/virelle.jpg"></td>
+<td class="info">
+<b>Virelle</b> <span class="online">● ONLINE</span>
+<p>Smiles sweetly. Leaves scars that never heal.</p>
+</td>
+</tr>
+
+</table>
+
+<div class="ad">
+<b>HOT VAMPIRES WAITING</b><br><br>
+Click profiles to message now.<br>
+<span class="blink">Limited Access</span>
+</div>
+
+<audio id="bgm" loop>
+  <source src="audio/bgm.mp3" type="audio/mpeg">
+</audio>
+
+<div class="footer">
+© 2003–2006 VampireDesire · All Rights Reserved
+</div>
 
 </body>
-      </html>
+  </html>
