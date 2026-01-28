@@ -1,15 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Vampire Desire</title>
-<link rel="stylesheet" href="style.css">
+  <title>VampireDesire</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<h1 class="blink">like hot vampires?</h1>
-<p>These vampires <u>desperately</u> want blood.</p>
-<button onclick="alert('WARNING: THEY WILL PURSUE YOU');location.href='warning.html'">Join Now</button>
+<body class="crt">
 
-<audio id="bgm" src="audio/bgm.mp3" loop></audio>
-<p><button onclick="document.getElementById('bgm').play()">▶ Play Music</button></p>
+  <!-- Fake loading -->
+  <div id="loading">
+    <p class="blink">CONNECTING TO VAMPIRE NETWORK...</p>
+  </div>
+
+  <div class="container">
+    <h1 class="glow">VAMPIREDESIRE.COM</h1>
+
+    <p class="warning-text">
+      ⚠ PRIVATE VAMPIRE MATCHING NETWORK ⚠<br>
+      Humans enter at own risk.
+    </p>
+
+    <button class="join-btn" onclick="location.href='warning.html'">
+      💙 JOIN NOW 💙
+    </button>
+
+    <p class="tiny">
+      By entering you confirm you are 18+ and not afraid of eternal devotion.
+    </p>
+  </div>
+
+  <!-- Floating Ads -->
+  <div class="ad ad-left">
+    <p>🦇 HOT VAMPIRES NEAR YOU</p>
+    <img src="images/ad1.gif">
+  </div>
+
+  <div class="ad ad-right">
+    <p>DRINK BLOOD<br>STAY YOUNG</p>
+    <img src="images/ad2.gif">
+  </div>
+
 </body>
 </html>
