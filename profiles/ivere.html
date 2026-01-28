@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ivere — Private Profile</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body data-profile="ivere">
+
+<div class="profile-container">
+
+  <h1 class="profile-name">Ivere</h1>
+
+  <img src="../images/ivere.jpg" class="profile-img">
+
+  <div class="profile-stats">
+    <p><b>Status:</b> Active</p>
+    <p><b>Turned:</b> 2009</p>
+    <p><b>Last Online:</b> 04:01 AM</p>
+    <p><b>About:</b> Feral instincts. Fiercely loyal once chosen.</p>
+  </div>
+
+  <!-- MESSAGE BAR -->
+  <div class="message-box">
+    <h3>Leave a Message</h3>
+    <textarea id="msgText"></textarea>
+    <button class="action" onclick="addMessage()">Send</button>
+    <div id="msgList" class="list"></div>
+  </div>
+
+  <!-- REVIEWS -->
+  <div class="review-box">
+    <h3>Reviews</h3>
+
+    <input id="revName" placeholder="Name (optional)">
+    <div class="stars">
+      <span onclick="setRating(1)">★</span>
+      <span onclick="setRating(2)">★</span>
+      <span onclick="setRating(3)">★</span>
+      <span onclick="setRating(4)">★</span>
+      <span onclick="setRating(5)">★</span>
+    </div>
+
+    <textarea id="revText"></textarea>
+    <button class="action" onclick="addReview()">Post</button>
+    <div id="revList" class="list"></div>
+  </div>
+
+  <a href="../profiles.html" class="back-link">← Back</a>
+
+</div>
+
+<script src="../profile.js"></script>
+<script src="../auth.js"></script>
+
+</body>
+</html>
