@@ -1,55 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>VampireDesire — Warning</title>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=VT323&display=swap" rel="stylesheet">
-
-<style>
-body {
-  background: black;
-  color: #b00000;
-  font-family: 'Nosifer', cursive;
-  text-align: center;
-  padding-top: 15vh;
-  cursor: crosshair;
-}
-h1 {
-  font-family: 'Creepster', cursive;
-  font-size: 50px;
-  text-shadow: 0 0 5px red;
-}
-p {
-  font-size: 20px;
-  margin: 20px;
-}
-button {
-  background: black;
-  color: #b00000;
-  border: 2px solid #b00000;
-  padding: 10px 25px;
-  font-size: 18px;
-  cursor: pointer;
-}
-button:hover {
-  background: #b00000;
-  color: black;
-}
-</style>
+<title>Warning</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-<h1>WARNING</h1>
-<p>Entering this site means you accept the eternal night.</p>
-<p>Do not proceed if faint of heart.</p>
-<button onclick="enterSite()">I ACCEPT</button>
-
-<script>
-function enterSite() {
-  document.body.innerHTML = '<h1 class="blink">ACCESS GRANTED...</h1>';
-  setTimeout(function(){ window.location.href = 'signup.html'; }, 2000);
-}
-</script>
-
+<h1 class="blink">warning</h1>
+<p>You are entering a restricted vampire network.</p>
+<p><b>We are not responsible for blood loss.</b></p>
+<button onclick="location.href='signup.html'">I Accept</button>
 </body>
-  </html>
+</html>
