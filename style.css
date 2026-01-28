@@ -1,180 +1,39 @@
-/* =========================
-   GLOBAL RESET
-========================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+background:#000;
+color:#eaeaea;
+font-family:Arial, Tahoma, Verdana, sans-serif;
+cursor:crosshair;
+padding:20px;
 }
-
-/* =========================
-   BODY / BACKGROUND
-========================= */
-body {
-  background-color: #000;
-  background-image:
-    repeating-linear-gradient(
-      0deg,
-      rgba(255,255,255,0.02),
-      rgba(255,255,255,0.02) 1px,
-      transparent 1px,
-      transparent 2px
-    );
-  color: #eaeaea;
-  font-family: Arial, Verdana, Tahoma, sans-serif;
-  cursor: crosshair;
-  padding: 20px;
-  line-height: 1.4;
+h1,h2{
+font-family:"Times New Roman", serif;
+color:#b10000;
+margin-bottom:10px;
 }
-
-/* =========================
-   HEADINGS
-========================= */
-h1, h2, h3 {
-  font-family: "Times New Roman", Georgia, serif;
-  color: #b10000;
-  text-transform: lowercase;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
+.blink{animation:blink 1s steps(1) infinite;}
+@keyframes blink{50%{opacity:0;}}
+p{font-size:16px;margin-bottom:10px;}
+button{
+background:#2b6fa3;
+border:1px solid #111;
+color:white;
+padding:8px 18px;
+font-size:15px;
 }
-
-h1 {
-  font-size: 36px;
+.profile{
+border:1px solid #333;
+background:#050505;
+padding:10px;
+margin-bottom:15px;
+display:flex;
+gap:15px;
 }
-
-h2 {
-  font-size: 26px;
+.profile img{
+width:150px;
+height:150px;
+object-fit:cover;
 }
-
-/* =========================
-   BLINK EFFECT
-========================= */
-.blink {
-  animation: blink 1s steps(1) infinite;
-}
-
-@keyframes blink {
-  50% { opacity: 0; }
-}
-
-/* =========================
-   TEXT STYLES
-========================= */
-p {
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-u {
-  color: #b10000;
-  text-decoration: underline;
-}
-
-.warning {
-  color: #ff0000;
-  font-weight: bold;
-}
-
-/* =========================
-   BUTTONS (FAKE 2000s UI)
-========================= */
-button {
-  background: linear-gradient(#5fa6d9, #2b6fa3);
-  border: 1px solid #0b2b44;
-  color: #fff;
-  font-family: Tahoma, Arial, sans-serif;
-  font-size: 15px;
-  padding: 8px 18px;
-  cursor: pointer;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.4);
-}
-
-button:hover {
-  background: linear-gradient(#7bbbe6, #3c82b8);
-}
-
-/* =========================
-   FORMS (SIGNUP PAGE)
-========================= */
-input {
-  background: #111;
-  border: 1px solid #333;
-  color: #eaeaea;
-  padding: 6px;
-  width: 200px;
-  font-family: Arial, sans-serif;
-  margin-bottom: 10px;
-}
-
-/* =========================
-   PROFILE LIST (VERY IMPORTANT)
-========================= */
-.profile {
-  border: 1px solid #2a2a2a;
-  background: #050505;
-  padding: 10px;
-  margin-bottom: 15px;
-  display: flex;
-  gap: 15px;
-  align-items: flex-start;
-}
-
-.profile:hover {
-  border-color: #b10000;
-}
-
-/* =========================
-   PROFILE IMAGES (1:1)
-========================= */
-.profile img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  filter: contrast(0.9) brightness(0.85) saturate(0.8);
-  border: 1px solid #222;
-}
-
-/* =========================
-   PROFILE DESCRIPTION
-========================= */
-.desc {
-  font-size: 19px;
-  color: #f0f0f0;
-}
-
-.desc b {
-  font-size: 21px;
-  color: #b10000;
-}
-
-/* =========================
-   AUDIO / NOW PLAYING
-========================= */
-.now-playing {
-  font-size: 14px;
-  color: #aaa;
-  margin-top: 10px;
-  font-style: italic;
-}
-
-/* =========================
-   FAKE POPUP BOX
-========================= */
-.popup {
-  border: 2px solid #b10000;
-  padding: 15px;
-  background: #000;
-  margin: 20px 0;
-}
-
-/* =========================
-   LINKS
-========================= */
-a {
-  color: #b10000;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
+.desc{font-size:19px;}
+.desc b{font-size:21px;color:#b10000;}
+input{background:#111;border:1px solid #333;color:#fff;padding:6px;margin-bottom:10px;width:200px;}
