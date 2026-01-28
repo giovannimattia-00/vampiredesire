@@ -37,3 +37,109 @@ object-fit:cover;
 .desc{font-size:19px;}
 .desc b{font-size:21px;color:#b10000;}
 input{background:#111;border:1px solid #333;color:#fff;padding:6px;margin-bottom:10px;width:200px;}
+
+body {
+  background: black;
+  color: #e6e6e6;
+  font-family: Verdana, Arial, sans-serif;
+  cursor: crosshair;
+}
+
+.crt {
+  text-shadow: 0 0 2px red;
+}
+
+.container {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.glow {
+  color: crimson;
+  text-shadow: 0 0 10px red;
+  font-size: 48px;
+}
+
+.join-btn {
+  background: #0066ff;
+  color: white;
+  font-size: 22px;
+  padding: 15px 40px;
+  border: 3px solid #99ccff;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.join-btn:hover {
+  background: #0033aa;
+}
+
+.warning-text {
+  margin-top: 20px;
+  color: #ff6666;
+}
+
+.tiny {
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+/* Blink */
+.blink {
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* Popup */
+.popup {
+  border: 3px solid crimson;
+  padding: 30px;
+  width: 80%;
+  margin: 100px auto;
+  background: black;
+}
+
+/* Floating Ads */
+.ad {
+  position: fixed;
+  width: 160px;
+  background: #111;
+  border: 2px solid red;
+  text-align: center;
+  font-size: 12px;
+}
+
+.ad img {
+  width: 100%;
+}
+
+.ad-left {
+  left: 10px;
+  top: 100px;
+}
+
+.ad-right {
+  right: 10px;
+  top: 200px;
+}
+
+/* Inputs */
+input {
+  display: block;
+  margin: 10px auto;
+  padding: 8px;
+  width: 200px;
+  background: black;
+  color: white;
+  border: 1px solid crimson;
+}
+
+button {
+  background: crimson;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
